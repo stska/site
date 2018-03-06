@@ -1,8 +1,9 @@
+//creating the top menu
 $('.dws-menu ul li').hover(function () {
-    // $('.dws-menu li ul').show('slow');
+
     $(this).children('ul').stop(false, true).show('slow');
 }, function () {
-    //$('.dws-menu li ul').hide('slow');
+
     $(this).children('ul').stop(false, true).hide('slow');
 });
 $('.tab_left li').on('click', function (event) {
@@ -18,9 +19,9 @@ $('.tab_left li').on('click', function (event) {
         $('#tab3').stop(false, true).show('slow');
     } else $('#tab4').stop(false, true).show('slow');
 
-
-    //$('.tab').stop(false, true).show('slow');
 });
+
+//creating the left side bar
 $('.pull_tab').on('click', function (event) {
     var p = $('.nav-side');
     var position = p.position();
@@ -48,9 +49,9 @@ $('.pull_tab').on('click', function (event) {
                 left: 950
             }, 100);
     }
-
-
 });
+
+//getting the array with cities
 var self = this;
 var array = [];
 $.getJSON("https://raw.githubusercontent.com/stska/test/master/kladr.json", function (data) {
@@ -60,12 +61,13 @@ $.getJSON("https://raw.githubusercontent.com/stska/test/master/kladr.json", func
     });
 });
 
+/* Не использовал готовое api или autocomplete из принципа, хотелось самому что-то организовать, но к сажалению не успел закончить. Но идея следующая. Я зараннее при загрузки страницы получаю массив из Json файла в массив array затем набирая от 3х символов и выше, при каждом новом символе прохожу по массиву и хахожу
+соответствия, найденные города подгружал бы в список который вываливался из инпута. Сейчас же он просто записывает все с один li и доделать уже не успеваю, так как каждый раз переделывал по другому.   */
 $('#query').keyup(function () {
     var Value = $('#query').val();
-    //var reg= new RegExp(""+Value+"");
     var reg = new RegExp("^(" + Value + ")");
     console.log(reg);
-    if (Value.length >= 2) {
+    if (Value.length >= 3) {
         for (var i = 0; i < array.length; i++) {
             console.log(array[i].City);
             console.log(reg);
@@ -84,12 +86,8 @@ $('#query').keyup(function () {
                 ))
                     ;
                 }
-
                 list(list_1);
-
             }
-
-
         }
         $('.list_res').remove();
     }
