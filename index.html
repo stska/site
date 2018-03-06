@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>bar</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+<body>
+<div class="container">
+    <header>
+        <nav class="dws-menu">
+            <ul>
+                <li><a href="#"><i class="fa fa-home fa-lg"></i>Главная</a>
+                    <ul>
+                        <li><a href="#">Главное</a>
+                            <ul>
+                                <li><a href="#"> 1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#"> 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Главное 1</a></li>
+                        <li><a href="#">Главное 2</a></li>
+                        <li><a href="#">Главное 3</a></li>
+                        <li><a href="#">Главное 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-shopping-cart"></i>Продукция</a>
+                    <ul>
+                        <li><a href="#">Продукция 1</a>
+                            <ul>
+                                <li><a href="#">Товар 1</a></li>
+                                <li><a href="#">Товар 2</a></li>
+                                <li><a href="#">Товар 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Продукция 2</a></li>
+                        <li><a href="#">Продукция 3</a></li>
+                        <li><a href="#">Продукция 4</a></li>
+                        <li><a href="#">Продукция 5</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="#"><i class="fa fa-cogs"></i>Услуги</a></li>
+                <li><a href="#"><i class="fa fa-th-list"></i>Новости</a>
+                    <ul>
+                        <li><a href="#">Новости</a>
+                            <ul>
+                                <li><a href="#"> 1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#"> 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Новости 1</a></li>
+                        <li><a href="#">Новости 2</a></li>
+                        <li><a href="#">Новости 3</a></li>
+                        <li><a href="#">Новости 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-envelope-open"></i>Контакты</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="pull_tab"></div>
+    <div class="nav-side">
+        <ul class="tab_left">
+            <li data-tab="one"><a href="#">Обратная связь</a></li>
+            <li data-tab="two"><a href="#">Прямая связь</a></li>
+            <li data-tab="three"><a href="#">Косвенная связь</a></li>
+            <li data-tab="four"><a href="#">Телепатическая связь с нами </a></li>
+        </ul>
+        <div class="tab_main">
+            <div class="tab" id="tab1">
+                <form>
+                    <input class="email" placeholder="email" type="email">
+                    <input name="cities" placeholder="City" id="query"/>
+                    <label for="query">city</label>
+                    <input class="submit" type="submit">
+
+                </form>
+                <!-- <div class="list_res"></div>  -->
+                <div class="list_new" id="list_1">
+                    <span data-scroll="0">up</span>
+                    <ul>
+                        <li><a></a></li>
+
+                    </ul>
+                    <span data-scroll="1">down</span>
+                </div>
+            </div>
+            <div class="tab" id="tab2"><p>BBBBBBBBBBBBBBBBBBBBBBBB BBBBBBBBB BBBBBBBB</p>
+            </div>
+            <div class="tab" id="tab3"><p>CCCCCCCCCCCCCCCCCCCC</p>
+            </div>
+            <div class="tab" id="tab4"><p>DDDDDDDDDDDDDDDDDDDD DDDDDDD DDDDDDD</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js" rel="script"></script>
+</body>
+</html>
